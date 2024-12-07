@@ -6,7 +6,8 @@ RUN apt update && apt install -y \
     build-essential \
     git \
     curl \
-    procps
+    procps \
+    vim
 
 # Install Homebrew
 RUN curl -fsSL -o install.sh https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh && \
