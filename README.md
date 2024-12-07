@@ -15,5 +15,6 @@ This will use the -v flag to bind the $(pwd)/site on your local machine to the /
 `cd quickstart/`
 
 ### Start the HUGO server
-** -D flag ensures that draft posts will be shown, good for development **
+* -D flag ensures that draft posts will be shown, good for development *
+
 `hugo -D serve --bind 0.0.0.0`
