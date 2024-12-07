@@ -13,7 +13,9 @@ docker build -t hugo-dev-env:latest .
 docker run -it --rm -v $(pwd)/site:/site -p 1313:1313 hugo-dev-env bash
 ```
 
--v flag will bind $(pwd)/site to the /site dir within the container.
+-v flag will bind $(pwd)/site to the /site dir within the container. 
+Bear in-mind that we set WORKDIR /site in the Dockerfile, so when starting the container it will automatically open in the /site dir.
+
 -p 1313:1313 will bind the local port to the container port (1313 is the default port for HUGO server)
 
 ### Build the static HTML pages and assets
