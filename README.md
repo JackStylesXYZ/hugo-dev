@@ -1,7 +1,7 @@
 # hugo-dev
 Dockerfile to create a HUGO development environment built on ubuntu
 
-## Building the image
+## Building the Docker image
 ```
 docker build -t hugo-dev-env:latest .
 ```
@@ -21,13 +21,19 @@ This will use the -v flag to bind the $(pwd)/site on your local machine to the /
 docker run -it --rm -v $(pwd)/site:/site -p 1313:1313 hugo-dev-env bash
 ```
 
-### Cd into the website dir
+### Build the static HTML pages and assets
+
 ```
-cd quickstart/
+hugo build
 ```
+hugo --buildDrafts    # or -D
+hugo --buildExpired   # or -E
+hugo --buildFuture    # or -F
 
 ### Start the HUGO server
 *-D flag ensures that draft posts will be shown, good for development*
+
+Make sure you're in the HUGO website dir before you run the command below. (*e.g. "cd quickstart"*)
 
 ```
 hugo -D serve --bind 0.0.0.0
