@@ -8,7 +8,11 @@ This will use the -v flag to bind the $(pwd)/site on your local machine to the /
 
 ## Run the HUGO development server
 `docker run -it --rm -v $(pwd)/site:/site -p 1313:1313 hugo-dev-env bash`
+
 then...
+
 `cd quickstart/`
+
 then...
+
 `hugo -D serve --bind 0.0.0.0`
