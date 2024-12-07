@@ -24,9 +24,9 @@ hugo build
 ```
 You can add one of the following flags to build optional files as described below:
 
-hugo --buildDrafts    # or -D
-hugo --buildExpired   # or -E
-hugo --buildFuture    # or -F
+* hugo --buildDrafts    # or -D
+* hugo --buildExpired   # or -E
+* hugo --buildFuture    # or -F
 
 Example:
 If you wanted to build the draft:true posts then you'd use the following command:
