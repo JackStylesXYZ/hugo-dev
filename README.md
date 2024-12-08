@@ -12,6 +12,7 @@ docker build -t hugo-dev-env:latest .
 ```
 docker run -it --rm -v $(pwd)/site:/site -p 1313:1313 hugo-dev-env bash
 ```
+**MAKE SURE YOU'RE IN THE DIR ABOVE /site WHEN RUNNING THIS COMMAND, OR THE -v WILL NOT BIND THE LOCAL DIR**
 
 -v flag will bind $(pwd)/site to the /site dir within the container. 
 Bear in-mind that we set `WORKDIR /site` in the Dockerfile, so when starting the container it will automatically open in the /site dir.
