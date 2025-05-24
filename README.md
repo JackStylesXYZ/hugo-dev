@@ -11,7 +11,7 @@ docker build -t hugo-dev-env:latest .
 ## Run the Docker container
 **MAKE SURE YOU'RE IN THE DIR ABOVE /site WHEN RUNNING THIS COMMAND, OR THE -v WILL NOT BIND THE LOCAL DIR**
 ```
-docker run -it --rm -v $(pwd)/site:/site -v ~/.ssh:/root/.ssh -p 1313:1313 hugo-dev-env bash
+docker run -it --rm -v $(pwd)/site:/site -v ~/.ssh:/root/.ssh:ro -p 1313:1313 hugo-dev-env bash
 ```
 
 -v flag will bind $(pwd)/site to the /site dir within the container. 
